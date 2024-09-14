@@ -764,6 +764,12 @@ footer {
     .show-nav nav ul {
         display: flex;
     }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
 }
 
 /* Media query for extra small screens */
@@ -775,5 +781,11 @@ footer {
     .hamburger {
         top: 10px;
         right: 10px;
+    }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
     }
 }
