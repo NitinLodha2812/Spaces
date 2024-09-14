@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Spaces</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href = "./index.html"><img src="logo.png" alt="Spaces Logo"></a>
+        </div>
+         <!-- Hamburger Menu Icon (visible only on small screens) -->
+         <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-image="./images/home.png">Home</a></li>
+                <li><a href="about.html" data-image="./images/about_us.png">About Us</a></li>
+                <li><a href="gallery.html" data-image="./images/gallery.png">Photo Gallery</a></li>
+                <li><a href="contact.html" data-image="./images/contact.jpg">Contact Us</a></li>
+                <li><a href="testimonials.html" data-image="./images/testimonials.png">Testimonials</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-us">
+            <h1>About Us</h1>
+            <div class="about-content">
+                <div class="company-history">
+                    <h2>Company History</h2>
+                    <p>Founded in 2021, Spaces has been a leading provider of high-quality plywood products. Our commitment to excellence and innovation has allowed us to grow and adapt in the ever-changing market. We take pride in our rich history and our dedication to providing the best solutions for our customers.</p>
+                </div>
+
+                <div class="mission-statement">
+                    <h2>Our Mission</h2>
+                    <p>At Spaces, our mission is to deliver top-notch plywood products that meet the highest standards of quality and sustainability. We are dedicated to enhancing our customers' experiences by offering exceptional service and innovative solutions.</p>
+                </div>
+
+                <div class="team">
+                    <h2>Meet Our Team</h2>
+                    <div class="team-member">
+                        <img src="user.png" alt="Team Member 1">
+                        <div class="team-info">
+                            <h3>John Doe</h3>
+                            <p>Founder & CEO</p>
+                            <p>John is the visionary behind Spaces, driving the company's success with his passion for quality and innovation.</p>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <img src="user.png" alt="Team Member 2">
+                        <div class="team-info">
+                            <h3>Jane Smith</h3>
+                            <p>Head of Sales</p>
+                            <p>Jane leads our sales team with a focus on customer satisfaction and business growth.</p>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <img src="user.png" alt="Team Member 3">
+                        <div class="team-info">
+                            <h3>Alex Johnson</h3>
+                            <p>Production Manager</p>
+                            <p>Alex ensures that our production processes run smoothly, maintaining the highest quality standards.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Spaces. All rights reserved.</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            document.body.classList.toggle('show-nav');
+        }
+    </script>
+</body>
+</html>

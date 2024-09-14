@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials | Spaces</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href = "./index.html"><img src="logo.png" alt="Spaces Logo"></a>
+        </div>
+
+         <!-- Hamburger Menu Icon (visible only on small screens) -->
+         <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html" data-image="./images/home.png">Home</a></li>
+                <li><a href="about.html" data-image="./images/about_us.png">About Us</a></li>
+                <li><a href="gallery.html" data-image="./images/gallery.png">Photo Gallery</a></li>
+                <li><a href="contact.html" data-image="./images/contact.jpg">Contact Us</a></li>
+                <li><a href="testimonials.html" data-image="./images/testimonials.png">Testimonials</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="testimonials">
+            <h1>What Our Clients Say</h1>
+            <div class="testimonial-grid">
+                <div class="testimonial-box">
+                    <div class="quote-icon">“</div>
+                    <p class="testimonial-content">Spaces provided exceptional quality plywood and their customer service was top-notch. Highly recommend!</p>
+                    <p class="testimonial-person">John Doe</p>
+                </div>
+
+                <div class="testimonial-box">
+                    <div class="quote-icon">“</div>
+                    <p class="testimonial-content">The range of plywood options at Spaces is impressive, and their delivery was prompt. Great experience overall.</p>
+                    <p class="testimonial-person">Jane Smith</p>
+                </div>
+
+                <div class="testimonial-box">
+                    <div class="quote-icon">“</div>
+                    <p class="testimonial-content">I was impressed with the durability of the plywood. Spaces is now my go-to supplier for all my woodworking needs.</p>
+                    <p class="testimonial-person">Alex Johnson</p>
+                </div>
+
+                <div class="testimonial-box">
+                    <div class="quote-icon">“</div>
+                    <p class="testimonial-content">Excellent service and high-quality products. Will definitely be coming back for more plywood in the future.</p>
+                    <p class="testimonial-person">Emily Davis</p>
+                </div>
+
+                <div class="testimonial-box">
+                    <div class="quote-icon">“</div>
+                    <p class="testimonial-content">Spaces offers a wide variety of plywood types and their team is very knowledgeable. Highly recommended!</p>
+                    <p class="testimonial-person">Michael Brown</p>
+                </div>
+
+                <div class="testimonial-box">
+                    <div class="quote-icon">“</div>
+                    <p class="testimonial-content">Great experience from start to finish. The plywood quality exceeded my expectations and the service was excellent.</p>
+                    <p class="testimonial-person">Sophia Wilson</p>
+                </div>
+<!-- 
+                <div class="testimonial-box">
+                    <div class="quote-icon">“</div>
+                    <p class="testimonial-content">Fantastic service and top-quality plywood. I am very satisfied with my purchase and would recommend Spaces to anyone.</p>
+                    <p class="testimonial-person">William Lee</p>
+                </div> -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Spaces. All rights reserved.</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            document.body.classList.toggle('show-nav');
+        }
+    </script>
+</body>
+</html>

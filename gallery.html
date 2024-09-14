@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery | Spaces</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href = "./index.html"><img src="logo.png" alt="Spaces Logo"></a>
+        </div>
+         <!-- Hamburger Menu Icon (visible only on small screens) -->
+         <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-image="./images/home.png">Home</a></li>
+                <li><a href="about.html" data-image="./images/about_us.png">About Us</a></li>
+                <li><a href="gallery.html" data-image="./images/gallery.png">Photo Gallery</a></li>
+                <li><a href="contact.html" data-image="./images/contact.jpg">Contact Us</a></li>
+                <li><a href="testimonials.html" data-image="./images/testimonials.png">Testimonials</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <main>
+        <section class="photo-gallery">
+            <h1>Photo Gallery</h1>
+            <div class="gallery-grid">
+                <!-- Gallery Items -->
+                <div class="gallery-item">
+                    <img src="images/image1.jpg" alt="Gallery Image 1" class="thumbnail" onclick="openModal('images/image1.jpg')">
+                    <div class="overlay">Click to view</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/image2.jpg" alt="Gallery Image 2" class="thumbnail" onclick="openModal('images/image2.jpg')">
+                    <div class="overlay">Click to view</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/image3.jpg" alt="Gallery Image 3" class="thumbnail" onclick="openModal('images/image3.jpg')">
+                    <div class="overlay">Click to view</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/image4.jpg" alt="Gallery Image 4" class="thumbnail" onclick="openModal('images/image4.jpg')">
+                    <div class="overlay">Click to view</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/image5.jpg" alt="Gallery Image 5" class="thumbnail" onclick="openModal('images/image5.jpg')">
+                    <div class="overlay">Click to view</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/image6.jpg" alt="Gallery Image 6" class="thumbnail" onclick="openModal('images/image6.jpg')">
+                    <div class="overlay"> Click to view</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/image1.jpg" alt="Gallery Image 7" class="thumbnail" onclick="openModal('images/image1.jpg')">
+                    <div class="overlay">Click to view</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/image2.jpg" alt="Gallery Image 8" class="thumbnail" onclick="openModal('images/image2.jpg')">
+                    <div class="overlay">Click to view</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/image3.jpg" alt="Gallery Image 9" class="thumbnail" onclick="openModal('images/image3.jpg')">
+                    <div class="overlay">Click to view </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/image4.jpg" alt="Gallery Image 10" class="thumbnail" onclick="openModal('images/image4.jpg')">
+                    <div class="overlay">Click to view</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/image5.jpg" alt="Gallery Image 11" class="thumbnail" onclick="openModal('images/image5.jpg')">
+                    <div class="overlay">Click to view</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/image6.jpg" alt="Gallery Image 12" class="thumbnail" onclick="openModal('images/image6.jpg')">
+                    <div class="overlay">Click to view</div>
+                </div>
+                <!-- Add more gallery items as needed -->
+            </div>
+        </section>
+
+        <!-- Modal -->
+        <div id="myModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImg">
+            <div id="caption"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Spaces. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function openModal(imgSrc) {
+            document.getElementById('myModal').style.display = "block";
+            document.getElementById('modalImg').src = imgSrc;
+            document.getElementById('caption').innerHTML = "";
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = "none";
+        }
+
+        function toggleMenu() {
+                document.body.classList.toggle('show-nav');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Spaces</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href = "./index.html"><img src="logo.png" alt="Spaces Logo"></a>
+        </div>
+         <!-- Hamburger Menu Icon (visible only on small screens) -->
+         <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-image="./images/home.png">Home</a></li>
+                <li><a href="about.html" data-image="./images/about_us.png">About Us</a></li>
+                <li><a href="gallery.html" data-image="./images/gallery.png">Photo Gallery</a></li>
+                <li><a href="contact.html" data-image="./images/contact.jpg">Contact Us</a></li>
+                <li><a href="testimonials.html" data-image="./images/testimonials.png">Testimonials</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-us">
+            <div class="contact-us-header">
+                <h1>Contact Us</h1>
+            </div>
+            <div class="contact-info">
+                <div class="customer-care">
+                    <h2>Customer Care</h2>
+                    <p>For any inquiries or support, please reach out to our customer care team:</p>
+                    <p><strong>Email:</strong> <a href="mailto:support@spacesplywood.com">support@spacesplywood.com</a></p>
+                    <p><strong>Phone:</strong> +1-234-567-8901</p>
+                </div>
+
+                <div class="contact-details">
+                    <h2>Contact Information</h2>
+                    <p><strong>Address:</strong> 123 Plywood Lane, Timber Town, TX 75001, USA</p>
+                    <p><strong>Business Hours:</strong> Mon - Fri: 9:00 AM - 6:00 PM</p>
+                </div>
+
+                <div class="social-address">
+                    <h2>Social Address</h2>
+                    <p>Connect with us on our social media platforms:</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/spacesplywood" target="_blank">
+                            <img src="logos/facebook.png" alt="Facebook" class="social-logo">
+                        </a>
+                        <a href="https://twitter.com/spacesplywood" target="_blank">
+                            <img src="logos/twitter.png" alt="Twitter" class="social-logo">
+                        </a>
+                        <a href="https://instagram.com/spacesplywood" target="_blank">
+                            <img src="logos/instagram.png" alt="Instagram" class="social-logo">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="get-in-touch">
+                    <h2>Get in Touch with Us</h2>
+                    <form action="submit_form.php" method="post">
+                        <input type="text" id="name" name="name" placeholder="Name" required>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                        <input type="tel" id="mobile" name="mobile" placeholder="Mobile">
+                        <textarea id="message" name="message" placeholder="Message" rows="6" required></textarea>
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Spaces. All rights reserved.</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            document.body.classList.toggle('show-nav');
+        }
+    </script>
+</body>
+</html>

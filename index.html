@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Spaces</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="./index.html"><img src="logo.png" alt="Spaces Logo"></a>
+        </div>
+        
+        <!-- Hamburger Menu Icon (visible only on small screens) -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html" data-image="./images/home.png">Home</a></li>
+                <li><a href="about.html" data-image="./images/about_us.png">About Us</a></li>
+                <li><a href="gallery.html" data-image="./images/gallery.png">Photo Gallery</a></li>
+                <li><a href="contact.html" data-image="./images/contact.jpg">Contact Us</a></li>
+                <li><a href="testimonials.html" data-image="./images/testimonials.png">Testimonials</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <video autoplay muted loop class="hero-video">
+                <source src="hero-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-content">
+                <h1>Welcome to Spaces</h1>
+                <p>Your premier source for high-quality plywood. Explore our range of products and find the perfect solution for your needs.</p>
+                <a href="contact.html" class="cta-button">Get in Touch</a>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <h2>Our Features</h2>
+            <div class="feature-items">
+                <div class="feature-item">
+                    <img src="main/feature1.jpg" alt="Feature 1">
+                    <h3>High Quality</h3>
+                    <p>We ensure our plywood meets the highest standards of quality and durability.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="main/feature2.jpg" alt="Feature 2">
+                    <h3>Wide Range</h3>
+                    <p>Choose from a diverse selection of plywood types and sizes to fit your project needs.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="main/feature3.jpg" alt="Feature 3">
+                    <h3>Exceptional Service</h3>
+                    <p>Our dedicated team is here to provide you with outstanding customer service and support.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-preview">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial-item">
+                <p>"Spaces offers the best plywood products I've ever used. Their service is outstanding!"</p>
+                <p class="testimonial-author">- John Doe</p>
+            </div>
+            <div class="testimonial-item">
+                <p>"The quality and variety of plywood from Spaces exceeded my expectations. Highly recommend!"</p>
+                <p class="testimonial-author">- Jane Smith</p>
+            </div>
+            <a href="testimonials.html" class="cta-button">Read More Testimonials</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Spaces. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Toggling Menu -->
+    <script>
+    function toggleMenu() {
+        document.body.classList.toggle('show-nav');
+    }
+    </script>
+</body>
+</html>
