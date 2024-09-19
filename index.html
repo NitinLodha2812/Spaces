@@ -8,6 +8,7 @@
 </head>
 <body>
     <header>
+        
         <div class="logo">
             <a href="./index.html"><img src="logo.png" alt="Spaces Logo"></a>
         </div>
@@ -45,7 +46,7 @@
         </section>
 
         <!-- Features Section -->
-        <section class="features">
+        <section class="features fade-in">
             <h2>Our Features</h2>
             <div class="feature-items">
                 <div class="feature-item">
@@ -67,7 +68,7 @@
         </section>
 
         <!-- Testimonials Section -->
-        <section class="testimonials-preview">
+        <section class="testimonials-preview fade-in">
             <h2>What Our Customers Say</h2>
             <div class="testimonial-item">
                 <p>"Spaces offers the best plywood products I've ever used. Their service is outstanding!"</p>
@@ -90,6 +91,30 @@
     function toggleMenu() {
         document.body.classList.toggle('show-nav');
     }
+    // Function to check if the element is in the viewport
+    function isElementInView(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.bottom >= 0
+        );
+    }
+
+    // Function to add the 'visible' class to elements when they scroll into view
+    function revealOnScroll() {
+        const elements = document.querySelectorAll('.fade-in');
+        elements.forEach(el => {
+            if (isElementInView(el)) {
+                el.classList.add('visible');
+            }
+        });
+    }
+
+    // Listen for the scroll event
+    window.addEventListener('scroll', revealOnScroll);
+
+    // Trigger scroll event on page load to reveal elements that are already in view
+    document.addEventListener('DOMContentLoaded', revealOnScroll);
     </script>
 </body>
 </html>

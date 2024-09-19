@@ -22,7 +22,7 @@ main {
 
 /* Header Styles */
 header {
-    background-color: rgb(113, 110, 108);
+    background-color: rgb(24, 23, 22);
     color: white;
     padding: 0; /* Remove extra padding from header */
     display: flex;
@@ -35,22 +35,27 @@ header {
     box-sizing: border-box;
 }
 
-header .logo {
-    display: flex;
-    align-items: center;
-}
-
 header .logo img {
     height: 2.5rem; /* Adjust based on your navbar height */
     width: auto; /* Maintain aspect ratio */
     object-fit: contain; /* Ensures the logo fits well within its container */
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    height: 80px; /* Adjust based on your layout */
+    background-image: url('./images/spaces-bg.jpg'); /* Your new background image */
+    background-size: cover;
+    background-position: center;
+    padding: 0 80px; /* Padding for spacing around the logo */
+}
+
 nav {
     flex: 1;
     display: flex;
     justify-content: flex-end;
-    padding-left: 20rem; /* Add padding to create space on the left */
+    padding-left: 0; /* Add padding to create space on the left */
 }
 
 nav ul {
@@ -101,6 +106,10 @@ nav ul li a:hover::before {
 
 nav ul li a:hover {
     color: white;
+}
+
+nav ul li a[data-image="./images/spaces-bg.jpg"] {
+    background-image: url('./images/spaces-bg.jpg');
 }
 
 nav ul li a[data-image="./images/home.png"] {
@@ -208,7 +217,7 @@ nav ul li a {
 }
 
 .feature-item {
-    background-color: white;
+    background-color: #FAF9F6  ;
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -561,6 +570,7 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    background-color: #FAF9F6;
 }
 
 .get-in-touch input, .get-in-touch textarea {
@@ -722,6 +732,61 @@ footer {
     box-sizing: border-box;
 }
 
+/* Slider container */
+.slider {
+    position: relative;
+    max-width: 1000px; /* Adjust as needed */
+    margin: auto;
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a background color */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Initial state (hidden) */
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px); /* Start slightly below */
+    transition: opacity 3s ease-out, transform 3s ease-out;
+}
+
+/* Final state (visible) when the element comes into view */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0); /* Back to the original position */
+}
+
+
+
 @media (max-width: 768px) {
     /* Stack navbar items vertically */
     nav ul {
@@ -756,19 +821,13 @@ footer {
     .hamburger div {
         width: 25px;
         height: 3px;
-        background-color: yellow;
+        background-color: white;
         margin: 5px 0;
     }
 
     /* Toggle menu when clicked */
     .show-nav nav ul {
         display: flex;
-    }
-
-    .gallery-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
     }
 
     .testimonial-grid {
@@ -785,12 +844,6 @@ footer {
     .hamburger {
         top: 10px;
         right: 10px;
-    }
-
-    .gallery-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
     }
 
     .testimonial-grid {

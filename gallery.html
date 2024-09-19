@@ -32,60 +32,13 @@
     <main>
         <section class="photo-gallery">
             <h1>Photo Gallery</h1>
-            <div class="gallery-grid">
-                <!-- Gallery Items -->
-                <div class="gallery-item">
-                    <img src="images/image1.jpg" alt="Gallery Image 1" class="thumbnail" onclick="openModal('images/image1.jpg')">
-                    <div class="overlay">Click to view</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/image2.jpg" alt="Gallery Image 2" class="thumbnail" onclick="openModal('images/image2.jpg')">
-                    <div class="overlay">Click to view</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/image3.jpg" alt="Gallery Image 3" class="thumbnail" onclick="openModal('images/image3.jpg')">
-                    <div class="overlay">Click to view</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/image4.jpg" alt="Gallery Image 4" class="thumbnail" onclick="openModal('images/image4.jpg')">
-                    <div class="overlay">Click to view</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/image5.jpg" alt="Gallery Image 5" class="thumbnail" onclick="openModal('images/image5.jpg')">
-                    <div class="overlay">Click to view</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/image6.jpg" alt="Gallery Image 6" class="thumbnail" onclick="openModal('images/image6.jpg')">
-                    <div class="overlay"> Click to view</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/image1.jpg" alt="Gallery Image 7" class="thumbnail" onclick="openModal('images/image1.jpg')">
-                    <div class="overlay">Click to view</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/image2.jpg" alt="Gallery Image 8" class="thumbnail" onclick="openModal('images/image2.jpg')">
-                    <div class="overlay">Click to view</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/image3.jpg" alt="Gallery Image 9" class="thumbnail" onclick="openModal('images/image3.jpg')">
-                    <div class="overlay">Click to view </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/image4.jpg" alt="Gallery Image 10" class="thumbnail" onclick="openModal('images/image4.jpg')">
-                    <div class="overlay">Click to view</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/image5.jpg" alt="Gallery Image 11" class="thumbnail" onclick="openModal('images/image5.jpg')">
-                    <div class="overlay">Click to view</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/image6.jpg" alt="Gallery Image 12" class="thumbnail" onclick="openModal('images/image6.jpg')">
-                    <div class="overlay">Click to view</div>
-                </div>
-                <!-- Add more gallery items as needed -->
+            <div class="slider">
+                <img id="galleryImage" src="images/image1.jpg" alt="Gallery Image">
+                <a class="prev" onclick="prevImage()">&#10094;</a>
+                <a class="next" onclick="nextImage()">&#10095;</a>
             </div>
         </section>
-
+    
         <!-- Modal -->
         <div id="myModal" class="modal">
             <span class="close" onclick="closeModal()">&times;</span>
@@ -93,6 +46,7 @@
             <div id="caption"></div>
         </div>
     </main>
+    
 
     <footer>
         <p>&copy; 2024 Spaces. All rights reserved.</p>
@@ -112,6 +66,49 @@
         function toggleMenu() {
                 document.body.classList.toggle('show-nav');
         }
+
+        // Gallery images array
+var images = [
+    "images/image1.jpg",
+    "images/image2.jpg",
+    "images/image3.jpg",
+    "images/image4.jpg",
+    "images/image5.jpg",
+    "images/image6.jpg"
+];
+
+var currentIndex = 0; // Start at the first image
+
+// Function to show the next image
+function nextImage() {
+    currentIndex++;
+    if (currentIndex >= images.length) {
+        currentIndex = 0; // Loop back to the first image
+    }
+    document.getElementById("galleryImage").src = images[currentIndex];
+}
+
+// Function to show the previous image
+function prevImage() {
+    currentIndex--;
+    if (currentIndex < 0) {
+        currentIndex = images.length - 1; // Loop to the last image
+    }
+    document.getElementById("galleryImage").src = images[currentIndex];
+}
+
+// Function to open the modal (if needed)
+function openModal(imgSrc) {
+    document.getElementById('myModal').style.display = "block";
+    document.getElementById('modalImg').src = imgSrc;
+    document.getElementById('caption').innerHTML = "";
+}
+
+// Function to close the modal
+function closeModal() {
+    document.getElementById('myModal').style.display = "none";
+}
+    
     </script>
 </body>
 </html>
