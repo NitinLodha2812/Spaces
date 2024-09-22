@@ -265,6 +265,15 @@ nav ul li a {
     text-align: right;
 }
 
+.why-choose-us-item {
+    background-color: white;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
 .cta-button {
     display: inline-block;
     margin-top: 1rem;
@@ -626,7 +635,18 @@ nav ul li a {
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 100%;
+    max-width: 600px;
+    display: flex; /* Ensure content and image are side by side */
+    align-items: flex-start; /* Align content with the top of the image */
+    flex-direction: row; /* Keep the image and content in a row */
+}
+
+.testimonial-photo {
+    width: 80px; /* Increase the width */
+    height: 100px; /* Increase the height */
+    border-radius: 50%; /* Keep the circular shape */
+    margin-right: 1.5rem; /* Add a bit more space between the photo and text */
+    object-fit: cover; /* Ensure the image covers the entire area */
 }
 
 .quote-icon {
@@ -642,6 +662,7 @@ nav ul li a {
     font-size: 1.2rem;
     line-height: 1.6;
     color: #333;
+    flex: 1;
 }
 
 .testimonial-person {
@@ -650,6 +671,7 @@ nav ul li a {
     color: #555555; 
     font-size: 1.5rem;
     text-align: right;
+    margin-top: auto; /* Push the name to the bottom */
 }
 
 /* Form Styles */
